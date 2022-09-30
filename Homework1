@@ -1,0 +1,32 @@
+package com.mycompany.homework1; import java.util.Scanner;
+/**
+*
+* @author natashapiedrabuena */
+public class Homework1 {
+public static void main(String[] args){
+Scanner input = new Scanner(System.in);
+System.out.println("Welcome to scissor-rock-paper game. Please input [scissor (0), rock (1) or paper (2)]:");
+int player1 = input.nextInt(); Math.random();
+int computer = (int)(Math.random() * 3);
+if(player1<0||player1>2){
+System.out.println("Invalid Input. Please try again"); }
+if((player1==0&&computer==2)||(player1==2&&computer==1)||(player1==1&&computer==0)){ if(player1==0&&computer==2){
+System.out.println("The computer is Paper. You are Scissors. You won"); }
+if(player1==2&&computer==1){
+System.out.println("The computer is rock. You are Paper. You won");
+} if(player1==1&&computer==0){
+System.out.println("The computer is Scissors. You are Rock. You won"); }
+if((player1==0&&computer==1)||(player1==1&&computer==2)||(player1==2&&computer==0)){ if((player1==0&&computer==1)){
+System.out.println("The computer is rock. You are scissors. You lost"); }
+if(player1==1&&computer==2){
+System.out.println("The computer is paper. You are rock. You lost");
+} if(player1==2&&computer==0){
+System.out.println("The computer is scissors. You are paper. You lost"); }
+} if(player1==0&&computer==0){
+System.out.println("The computer is scissors. You are scissors too. It is a draw"); }
+if(player1==1&&computer==1){
+System.out.println("The computer is rock. You are rock too. It is a draw");
+} if(player1==2&&computer==1){
+System.out.println("The computer is paper. You are paper too. It is a draw"); }
+} }
+}
